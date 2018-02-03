@@ -247,10 +247,10 @@
 <blockquote>
 <p>JSON request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost:3000/user_token"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://example.com/user_token"</span>
   -H <span class="s2">"Content-Type: application/json"</span>
   -X <span class="s2">"POST"</span>
-  -d <span class="s1">$'{"auth": {"email": "user1@estemity.com", "password": "password123"}}'</span>
+  -d <span class="s1">$'{"auth": {"email": "foo@example.com", "password": "password123"}}'</span>
 </code></pre>
 <blockquote>
 <p>JSON response:</p>
@@ -271,7 +271,7 @@ API expects JWT to be included all requests (except a request for a user signup)
 <blockquote>
 <p>JSON request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/users"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://example.com/users"</span>
   -H <span class="s2">"Authorization: Bearer eyJ0eXA.."</span>
 </code></pre>
 <blockquote>
@@ -292,7 +292,7 @@ API expects JWT to be included all requests (except a request for a user signup)
 </span></code></pre>
 <p>This endpoint retrieves all users.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/users</code></p>
+<p><code>GET https://example.com/api/users</code></p>
 <h3 id='error-code'>Error Code</h3>
 <table><thead>
 <tr>
