@@ -20,10 +20,10 @@ Welcome to the Golf API!
 > JSON request:
 
 ```shell
-curl "http://localhost:3000/user_token"
+curl "https://example.com/user_token"
   -H "Content-Type: application/json"
   -X "POST"
-  -d $'{"auth": {"email": "user1@estemity.com", "password": "password123"}}'
+  -d $'{"auth": {"email": "foo@example.com", "password": "password123"}}'
 ```
 
 > JSON response:
@@ -50,7 +50,7 @@ API expects JWT to be included all requests (except a request for a user signup)
 > JSON request:
 
 ```shell
-curl "http://example.com/users"
+curl "https://example.com/users"
   -H "Authorization: Bearer eyJ0eXA.."
 ```
 
@@ -75,7 +75,7 @@ This endpoint retrieves all users.
 
 ### HTTP Request
 
-`GET http://example.com/api/users`
+`GET https://example.com/api/users`
 
 ### Error Code
 
