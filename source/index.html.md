@@ -14,6 +14,8 @@ Welcome to the Golf API!
 
 # Authentication
 
+## Authenticate User
+
 > JSON request:
 
 ```shell
@@ -39,6 +41,17 @@ API expects JWT to be included all requests (except a request for a user signup)
 <aside class="notice">
 <code>eyJ0eXA..</code> is an HS256 signed token.
 </aside>
+
+### HTTP Request
+
+`GET https://example.com/user_token`
+
+### Error Code
+
+Error Code | Meaning
+---------  | -----------
+201        | The user is successfully authenticated.
+404        | The user cannot be found or the password is invalid.
 
 # Users
 
@@ -72,11 +85,11 @@ This endpoint retrieves all users.
 
 ### HTTP Request
 
-`GET https://example.com/api/users`
+`GET https://example.com/users`
 
 ### Error Code
 
 Error Code | Meaning
 ---------  | -----------
-200        | success
-401        | unauthorized - missing or invalid JWT in the header
+200        | Success
+401        | Unauthorized
