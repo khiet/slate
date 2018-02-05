@@ -220,6 +220,11 @@
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#authenticate-user" class="toc-h2 toc-link" data-title="authenticate-user">Authenticate User</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#users" class="toc-h1 toc-link" data-title="users">Users</a>
@@ -240,7 +245,7 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Golf API!</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='authentication'>Authentication</h1><h2 id='authenticate-user'>Authenticate User</h2>
 <blockquote>
 <p>JSON request:</p>
 </blockquote>
@@ -264,6 +269,24 @@ API expects JWT to be included all requests (except a request for a user signup)
 <aside class="notice">
 <code>eyJ0eXA..</code> is an HS256 signed token.
 </aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://example.com/user_token</code></p>
+<h3 id='error-code'>Error Code</h3>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td>The user is successfully authenticated.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>The user cannot be found or the password is invalid.</td>
+</tr>
+</tbody></table>
 <h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2>
 <blockquote>
 <p>JSON request:</p>
@@ -288,9 +311,9 @@ API expects JWT to be included all requests (except a request for a user signup)
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all users.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://example.com/api/users</code></p>
-<h3 id='error-code'>Error Code</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://example.com/users</code></p>
+<h3 id='error-code-2'>Error Code</h3>
 <table><thead>
 <tr>
 <th>Error Code</th>
@@ -299,11 +322,11 @@ API expects JWT to be included all requests (except a request for a user signup)
 </thead><tbody>
 <tr>
 <td>200</td>
-<td>success</td>
+<td>Success</td>
 </tr>
 <tr>
 <td>401</td>
-<td>unauthorized - missing or invalid JWT in the header</td>
+<td>Unauthorized</td>
 </tr>
 </tbody></table>
 
