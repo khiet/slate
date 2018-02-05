@@ -34,7 +34,7 @@ curl "https://example.com/user_token"
 ```
 
 Authentication (and authorization) is handled by JWT which is set to be valid for one year.
-API expects JWT to be included all requests (except a request for a user signup) to the server in a header that looks like the following:
+API expects JWT to be included in all requests (except a request for a user signup) to the server in a header that looks like the following:
 
 `Authentication: Bearer eyJ0eXA..`
 
